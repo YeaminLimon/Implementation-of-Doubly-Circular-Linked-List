@@ -1,28 +1,49 @@
 # YeaminLimon.Implementation-of-Doubly-Circular-Linked-List
 
 import java.util.Scanner;
+
 class Node{
-	int data;
-	Node next;
-	Node prev;
+
+int data;
+
+Node next;
+
+Node prev;
 }
+
 class linkedList{
-	Node start;
-	linkedList(){
-		start = null;
-	}
-	Node getNode() {
-		Node newnode = new Node();
-		Scanner  input = new Scanner(System.in);
-		System.out.println("Enter the data");
-		newnode.data = input.nextInt();
-		newnode.next = null;
-		newnode.prev=null;
-		return newnode;
-	}
-	void insertAtStart() {
-		Node newnode = getNode();
-		if(start == null) {
+
+Node start;
+
+linkedList(){
+
+start = null;
+
+}
+
+Node getNode() {
+
+Node newnode = new Node();
+
+Scanner  input = new Scanner(System.in);
+
+System.out.println("Enter the data");
+
+newnode.data = input.nextInt();
+
+newnode.next = null;
+
+newnode.prev=null;
+
+return newnode;
+
+}
+
+void insertAtStart() {
+
+Node newnode = getNode();
+
+if(start == null) {
 			start = newnode;
 			newnode.prev=start;
 			newnode.next=start;
